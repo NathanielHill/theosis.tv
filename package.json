@@ -1,0 +1,55 @@
+{
+  "name": "theosis.tv",
+  "version": "1.0.0",
+  "description": "Theosis.TV App",
+  "author": "hello@nathanielhill.io",
+  "license": "UNLICENSED",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint --fix 'src/**/*.{js,jsx}'",
+    "format": "prettier --write 'src/**/*.{js,jsx,json,css,yml}'",
+    "size": "yarn build && bundlesize",
+    "analyze": "ANALYZE=true yarn build"
+  },
+  "browserslist": [
+    "last 2 years and not dead and >0.1%"
+  ],
+  "bundlesize": [
+    {
+      "path": ".next/static/chunks/*.js",
+      "maxSize": "35kB"
+    },
+    {
+      "path": ".next/static/chunks/pages/*.js",
+      "maxSize": "10kB"
+    },
+    {
+      "path": ".next/static/css/*.css",
+      "maxSize": "10kB"
+    }
+  ],
+  "lint-staged": {
+    "**/*.js": [
+      "prettier --write",
+      "eslint --fix"
+    ]
+  },
+  "dependencies": {
+    "next": "^13.2.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "tailwindcss": "^3.2.7"
+  },
+  "devDependencies": {
+    "@next/bundle-analyzer": "^13.2.4",
+    "autoprefixer": "^10.4.14",
+    "bundlesize": "^0.18.1",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.0",
+    "postcss": "^8.4.21",
+    "prettier": "^2.8.4"
+  }
+}
